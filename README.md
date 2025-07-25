@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Color Tools
 
-## Getting Started
+一个为设计师和开发者打造的强大、直观的在线颜色工具集。该应用提供一整套工具，可以轻松地生成、转换、混合和管理颜色。
 
-First, run the development server:
+## ✨ 主要功能
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   🎨 **颜色生成**: 创建新的调色板。
+-   🔄 **颜色转换**: 在不同颜色格式（如 HEX、RGB、HSL）之间进行转换。
+-   🧪 **颜色混合**: 混合多种颜色以查看结果。
+-   🌈 **颜色渐变**: 生成平滑的颜色渐变。
+-   👁️ **颜色对比度**: 检查颜色之间的对比度，以确保可访问性（WCAG）。
+-   💾 **颜色存储**: 保存和管理您喜欢的颜色。
+-   🔗 **颜色分享**: 与他人分享您的颜色创作。
+-   🔍 **颜色分析**: 获取有关颜色的详细信息。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 本地运行
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+请按照以下说明在您的本地计算机上设置和运行项目，以进行开发和测试。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 环境要求
 
-## Learn More
+-   [Node.js](https://nodejs.org/) (建议使用 v18 或更高版本)
+-   [pnpm](https://pnpm.io/installation)
 
-To learn more about Next.js, take a look at the following resources:
+### 安装与启动
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1.  **克隆仓库:**
+    ```bash
+    git clone <your-repository-url>
+    cd color-tools
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2.  **安装依赖:**
+    ```bash
+    pnpm install
+    ```
 
-## Deploy on Vercel
+3.  **启动开发服务器:**
+    ```bash
+    pnpm run dev
+    ```
+    在浏览器中打开 [http://localhost:3000](http://localhost:3000) 查看结果。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 其他命令
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   **生产环境打包:**
+    ```bash
+    pnpm run build
+    ```
+
+-   **运行生产模式:**
+    ```bash
+    pnpm run start
+    ```
+
+-   **代码风格检查:**
+    ```bash
+    pnpm run lint
+    ```
+
+## 🛠️ 技术栈
+
+-   **框架**: [Next.js](https://nextjs.org/)
+-   **样式**: [Tailwind CSS](https://tailwindcss.com/)
+-   **语言**: [TypeScript](https://www.typescriptlang.org/)
+
+## 部署
+
+该项目使用 [Vercel](https://vercel.com/) 进行部署。
+
+## 🤝 贡献
+
+欢迎提交贡献、报告问题和提出功能请求！
