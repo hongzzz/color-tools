@@ -4,10 +4,12 @@ import { useState, useMemo } from 'react';
 import { colord, extend } from 'colord';
 import mixPlugin from 'colord/plugins/mix';
 import ColorPickerInput from '@/components/ColorPickerInput';
+import { useTranslations } from 'next-intl';
 
 extend([mixPlugin]);
 
 export default function Page() {
+  const t = useTranslations('Blender');
   const [colorA, setColorA] = useState('#ff0000');
   const [colorB, setColorB] = useState('#0000ff');
   const [ratio, setRatio] = useState(0.5);
@@ -27,12 +29,12 @@ export default function Page() {
 
   return (
     <div className="p-4 sm:p-8 bg-white rounded-2xl shadow-lg w-full">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-zinc-800">Color Blender</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-zinc-800">{t('title')}</h2>
       
       <div className="flex flex-col sm:flex-row justify-around items-center mb-4 space-y-4 sm:space-y-0">
         {/* Color A */}
         <div className="flex flex-col items-center space-y-2">
-          <label htmlFor="colorA-picker" className="text-sm font-medium text-zinc-600">Color A</label>
+          <label htmlFor="colorA-picker" className="text-sm font-medium text-zinc-600">{t('colorA')}</label>
           <ColorPickerInput value={colorA} onChange={setColorA} />
           <input
             type="text"
@@ -42,11 +44,11 @@ export default function Page() {
           />
         </div>
 
-        <div className="text-4xl font-light text-zinc-400">+</div>
+        <div className="text-4xl font-light text-zinc-400">{t('plus')}</div>
 
         {/* Color B */}
         <div className="flex flex-col items-center space-y-2">
-          <label htmlFor="colorB-picker" className="text-sm font-medium text-zinc-600">Color B</label>
+          <label htmlFor="colorB-picker" className="text-sm font-medium text-zinc-600">{t('colorB')}</label>
           <ColorPickerInput value={colorB} onChange={setColorB} />
           <input
             type="text"
@@ -59,7 +61,7 @@ export default function Page() {
 
       {/* Slider */}
       <div className="my-8">
-        <label htmlFor="ratio" className="block text-sm font-medium text-zinc-600 mb-2 text-center">Ratio ({Math.round(ratio * 100)}%)</label>
+        <label htmlFor="ratio" className="block text-sm font-medium text-zinc-600 mb-2 text-center">{t('ratio', { percent: Math.round(ratio * 100) })}</label>
         <input
           type="range"
           id="ratio"
@@ -74,7 +76,7 @@ export default function Page() {
 
       {/* Result */}
       <div className="flex flex-col items-center">
-        <label className="text-sm font-medium text-zinc-600">Result</label>
+        <label className="text-sm font-medium text-zinc-600">{t('result')}</label>
         <div className="w-full h-24 mt-2 rounded-xl border border-zinc-200" style={{ backgroundColor: blendedColor }}></div>
         <div className="mt-2 text-lg font-semibold text-zinc-700">{blendedColor}</div>
       </div>

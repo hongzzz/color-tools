@@ -1,0 +1,61 @@
+{
+  "Header": {
+    "title": "Color Tools",
+    "blender": "Blender",
+    "contrast": "Contrast",
+    "converter": "Converter",
+    "gradient": "Gradient",
+    "palette": "Palette"
+  },
+  "Home": {
+    "title": "Welcome to Color Tools",
+    "subtitle": "Select a tool from the navigation bar to get started."
+  },
+  "Blender": {
+    "title": "Color Blender",
+    "colorA": "Color A",
+    "colorB": "Color B",
+    "plus": "+",
+    "ratio": "Ratio ({percent}%)",
+    "result": "Result"
+  },
+  "Converter": {
+    "title": "Color Converter",
+    "hex": "HEX",
+    "rgb": "RGB",
+    "hsl": "HSL",
+    "rgbPlaceholder": "e.g., 255, 99, 71",
+    "hslPlaceholder": "e.g., 0, 100%, 50%"
+  },
+  "Contrast": {
+    "title": "Contrast Checker",
+    "sampleText": "The quick brown fox jumps over the lazy dog.",
+    "sampleNote": "(Sample Text)",
+    "textColor": "Text Color",
+    "bgColor": "Background Color",
+    "contrastRatio": "Contrast Ratio",
+    "wcag": "WCAG Standards",
+    "aaNormal": "AA (Normal Text)",
+    "aaLarge": "AA (Large Text)",
+    "aaaNormal": "AAA (Normal Text)",
+    "aaaLarge": "AAA (Large Text)"
+  },
+  "Palette": {
+    "title": "Palette Generator",
+    "baseColor": "Base Color",
+    "harmony": "Harmony",
+    "analogous": "Analogous",
+    "complementary": "Complementary",
+    "splitComplementary": "Split Complementary",
+    "triadic": "Triadic",
+    "tetradic": "Tetradic"
+  },
+  "Gradient": {
+    "title": "Gradient Generator",
+    "startColor": "Start Color",
+    "endColor": "End Color",
+    "steps": "Steps",
+    "preview": "Preview",
+    "colors": "Colors"
+  }
+}

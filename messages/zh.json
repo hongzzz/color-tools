@@ -1,0 +1,61 @@
+{
+  "Header": {
+    "title": "颜色工具",
+    "blender": "混合器",
+    "contrast": "对比度",
+    "converter": "转换器",
+    "gradient": "渐变",
+    "palette": "调色板"
+  },
+  "Home": {
+    "title": "欢迎使用颜色工具",
+    "subtitle": "请从导航栏选择一个工具开始。"
+  },
+  "Blender": {
+    "title": "颜色混合器",
+    "colorA": "颜色A",
+    "colorB": "颜色B",
+    "plus": "+",
+    "ratio": "比例（{percent}%）",
+    "result": "结果"
+  },
+  "Converter": {
+    "title": "颜色转换器",
+    "hex": "十六进制",
+    "rgb": "RGB",
+    "hsl": "HSL",
+    "rgbPlaceholder": "例如：255, 99, 71",
+    "hslPlaceholder": "例如：0, 100%, 50%"
+  },
+  "Contrast": {
+    "title": "对比度检测",
+    "sampleText": "The quick brown fox jumps over the lazy dog.",
+    "sampleNote": "（示例文本）",
+    "textColor": "文字颜色",
+    "bgColor": "背景颜色",
+    "contrastRatio": "对比度",
+    "wcag": "WCAG 标准",
+    "aaNormal": "AA（普通文本）",
+    "aaLarge": "AA（大号文本）",
+    "aaaNormal": "AAA（普通文本）",
+    "aaaLarge": "AAA（大号文本）"
+  },
+  "Palette": {
+    "title": "调色板生成器",
+    "baseColor": "基色",
+    "harmony": "和谐类型",
+    "analogous": "类似色",
+    "complementary": "互补色",
+    "splitComplementary": "分裂互补色",
+    "triadic": "三分色",
+    "tetradic": "四分色"
+  },
+  "Gradient": {
+    "title": "渐变生成器",
+    "startColor": "起始颜色",
+    "endColor": "结束颜色",
+    "steps": "步数",
+    "preview": "预览",
+    "colors": "颜色列表"
+  }
+}

@@ -5,10 +5,12 @@ import { colord, extend } from 'colord';
 import mixPlugin from 'colord/plugins/mix';
 import CopyToClipboardButton from '@/components/CopyToClipboardButton';
 import ColorPickerInput from '@/components/ColorPickerInput';
+import { useTranslations } from 'next-intl';
 
 extend([mixPlugin]);
 
 export default function Page() {
+  const t = useTranslations('Gradient');
   const [startColor, setStartColor] = useState('#ff0000');
   const [endColor, setEndColor] = useState('#0000ff');
   const [steps, setSteps] = useState(10);
@@ -30,12 +32,12 @@ export default function Page() {
 
   return (
     <div className="p-4 sm:p-8 bg-white rounded-2xl shadow-lg w-full">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-zinc-800">Gradient Generator</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-zinc-800">{t('title')}</h2>
 
       {/* Inputs */}
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0">
         <div className="flex flex-col items-center space-y-2">
-          <label className="text-sm font-medium text-zinc-600">Start Color</label>
+          <label className="text-sm font-medium text-zinc-600">{t('startColor')}</label>
           <ColorPickerInput value={startColor} onChange={setStartColor} className="w-20 h-20" />
           <input 
             type="text" 
@@ -45,7 +47,7 @@ export default function Page() {
           />
         </div>
         <div className="flex flex-col items-center space-y-2">
-          <label className="text-sm font-medium text-zinc-600">End Color</label>
+          <label className="text-sm font-medium text-zinc-600">{t('endColor')}</label>
           <ColorPickerInput value={endColor} onChange={setEndColor} className="w-20 h-20" />
           <input 
             type="text" 
@@ -57,7 +59,7 @@ export default function Page() {
       </div>
 
       <div className="mb-6">
-        <label htmlFor="steps" className="block text-sm font-medium text-zinc-600 mb-1">Steps</label>
+        <label htmlFor="steps" className="block text-sm font-medium text-zinc-600 mb-1">{t('steps')}</label>
         <input
           type="number"
           id="steps"
@@ -71,13 +73,13 @@ export default function Page() {
 
       {/* Gradient Preview */}
       <div className="mb-6">
-        <h3 className="text-lg font-semibold text-zinc-700 mb-2">Preview</h3>
+        <h3 className="text-lg font-semibold text-zinc-700 mb-2">{t('preview')}</h3>
         <div className="w-full h-24 rounded-lg" style={{ background: gradientCss }}></div>
       </div>
 
       {/* Gradient Steps */}
       <div>
-        <h3 className="text-lg font-semibold text-zinc-700 mb-2">Colors</h3>
+        <h3 className="text-lg font-semibold text-zinc-700 mb-2">{t('colors')}</h3>
         <div className="flex flex-wrap gap-2 justify-between">
           {gradient.map((color, index) => (
             <div key={index} className="p-2 bg-gray-50 rounded-lg flex items-center justify-between">

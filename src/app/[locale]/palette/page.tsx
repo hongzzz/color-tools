@@ -5,18 +5,19 @@ import { colord, extend } from 'colord';
 import harmoniesPlugin, { HarmonyType } from 'colord/plugins/harmonies';
 import CopyToClipboardButton from '@/components/CopyToClipboardButton';
 import ColorPickerInput from '@/components/ColorPickerInput';
+import { useTranslations } from 'next-intl';
 
 extend([harmoniesPlugin]);
 
-const paletteTypes = [
-  { id: 'analogous', name: 'Analogous' },
-  { id: 'complementary', name: 'Complementary' },
-  { id: 'split-complementary', name: 'Split Complementary' },
-  { id: 'triadic', name: 'Triadic' },
-  { id: 'tetradic', name: 'Tetradic' },
-];
-
 export default function PaletteGenerator() {
+  const t = useTranslations('Palette');
+  const paletteTypes = [
+    { id: 'analogous', name: t('analogous') },
+    { id: 'complementary', name: t('complementary') },
+    { id: 'split-complementary', name: t('splitComplementary') },
+    { id: 'triadic', name: t('triadic') },
+    { id: 'tetradic', name: t('tetradic') },
+  ];
   const [baseColor, setBaseColor] = useState('#3b82f6');
   const [paletteType, setPaletteType] = useState<HarmonyType>('analogous');
 
@@ -29,12 +30,12 @@ export default function PaletteGenerator() {
 
   return (
     <div className="p-4 sm:p-8 bg-white rounded-2xl shadow-lg w-full">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-zinc-800">Palette Generator</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-zinc-800">{t('title')}</h2>
 
       {/* Inputs */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8 p-4 bg-zinc-50 rounded-lg">
         <div className="flex items-center gap-4">
-          <label className="text-sm font-medium text-zinc-600">Base Color</label>
+          <label className="text-sm font-medium text-zinc-600">{t('baseColor')}</label>
           <ColorPickerInput value={baseColor} onChange={setBaseColor} className="w-12 h-12" />
           <input
             type="text"
@@ -44,7 +45,7 @@ export default function PaletteGenerator() {
           />
         </div>
         <div className="flex items-center gap-4">
-          <label htmlFor="paletteType" className="text-sm font-medium text-zinc-600">Harmony</label>
+          <label htmlFor="paletteType" className="text-sm font-medium text-zinc-600">{t('harmony')}</label>
           <select
             id="paletteType"
             value={paletteType}
